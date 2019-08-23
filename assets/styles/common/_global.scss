@@ -1,0 +1,143 @@
+/*==============================================================================
+
+	Global styles
+
+  # Reset and standard styles
+  # General classes
+
+  ==============================================================================*/
+
+/*=======================================================
+  # Reset and standard styles
+  =======================================================*/
+
+html {
+  font-size: 15px;
+}
+
+body {
+  animation: fadeIn 1000ms;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+::-moz-selection {
+  background: $color-main;
+  color: $white;
+}
+
+::selection {
+  background: $color-main;
+  color: $white;
+}
+
+.alert.alert-warning {
+  margin: 0px;
+  border-radius: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin: 15px 0;
+
+  li {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.pad-0 {
+  padding: 0px !important;
+}
+
+.marg-0 {
+  margin: 0px !important;
+}
+
+.float-right {
+  float: right !important;
+}
+.float-left {
+  float: left !important;
+}
+.float-none {
+  float: none !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-underline {
+  text-decoration: underline !important;
+}
+.text-italic {
+  font-style: italic !important;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.box-shadow {
+  box-shadow: 0px 0px 15px rgba($black, 0.3) !important;
+}
+
+/*=======================================================
+  # General classes
+  =======================================================*/
+
+.b-lazy {
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.b-lazy.b-loaded {
+  opacity: 1;
+}
+
+.cookie-notice-container {
+
+  a {
+    padding: 0;
+  }
+}

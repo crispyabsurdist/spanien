@@ -1,0 +1,71 @@
+/*==============================================================================
+
+	Save all typograhpy classes in this file so that everything is in one place
+
+	==============================================================================*/
+
+	.font-heading,
+	h1, h2 {
+		font-weight: 800;
+		display: block;
+	}
+
+	p,
+	.font-size-p {
+		font-size: 1.8rem;
+		line-height: 3.2rem;
+		font-weight: 200;
+
+		+ p {
+			margin-bottom: 15px;
+		}
+	}
+
+	h1,
+	.font-size-1 {
+		font-size: calc( 4vw + 18px );
+		line-height: 1.1;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 7rem;
+		}
+	}
+
+	h2,
+	.font-size-2 {
+		font-size: calc( 2.5vw + 15px );
+		margin-bottom: 12px;
+	}
+
+	h3,
+	.font-size-3 {
+		font-size: calc( 1.4vw + 15px );
+		font-weight: 400;
+	}
+
+	time {
+		font-size: 14px;
+	}
+
+	.ingress {
+		font-size: 3.2rem;
+		line-height: 4.2rem;
+		font-weight: 100;
+
+		@include media-breakpoint-down(md) {
+			font-size: 2rem;
+			line-height: 3.2rem;
+		}
+	}
+
+	.text-white {
+		color: $white;
+	}
+
+	.text-black {
+		color: $black;
+	}
+
+	.text-center {
+		text-align: center;
+	}
