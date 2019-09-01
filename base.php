@@ -28,7 +28,7 @@ use Roots\Sage\Wrapper;
   </div><!-- /.wrap -->
   <?php
   do_action('get_footer');
-  get_template_part('templates/main-header');
+  get_template_part('templates/main-footer');
   wp_footer();
   ?>
 

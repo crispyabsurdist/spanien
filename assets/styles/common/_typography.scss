@@ -4,68 +4,112 @@
 
 	==============================================================================*/
 
-	.font-heading,
-	h1, h2 {
-		font-weight: 800;
-		display: block;
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,600,700&display=swap');
+
+$font-main: 'Playfair Display', serif;
+$font-head: 'Dosis', sans-serif;
+
+
+// Dosis - 300, 400, 600, 700 
+
+.font-weight {
+
+	&-300 {
+		font-weight: 300;
 	}
 
-	p,
-	.font-size-p {
-		font-size: 1.8rem;
-		line-height: 3.2rem;
-		font-weight: 200;
-
-		+ p {
-			margin-bottom: 15px;
-		}
-	}
-
-	h1,
-	.font-size-1 {
-		font-size: calc( 4vw + 18px );
-		line-height: 1.1;
-
-		@include media-breakpoint-up(xl) {
-			font-size: 7rem;
-		}
-	}
-
-	h2,
-	.font-size-2 {
-		font-size: calc( 2.5vw + 15px );
-		margin-bottom: 12px;
-	}
-
-	h3,
-	.font-size-3 {
-		font-size: calc( 1.4vw + 15px );
+	&-400 {
 		font-weight: 400;
 	}
 
-	time {
-		font-size: 14px;
+	&-600 {
+		font-weight: 600;
 	}
 
-	.ingress {
-		font-size: 3.2rem;
-		line-height: 4.2rem;
-		font-weight: 100;
-
-		@include media-breakpoint-down(md) {
-			font-size: 2rem;
-			line-height: 3.2rem;
-		}
+	&-700 {
+		font-weight: 700;
 	}
+}
 
-	.text-white {
-		color: $white;
-	}
+a {
+	font-family: $font-head;
+	color: $color-main;
+	transition: opacity .2s ease-in-out;
 
-	.text-black {
-		color: $black;
+	&:hover,
+	&:focus {
+		color: inherit;
+		opacity: .8;
 	}
+}
 
-	.text-center {
-		text-align: center;
-	}
+.font-head,
+h1,
+h2 {
+  font-family: $font-head;
+  font-weight: 800;
+  display: block;
+}
+
+p,
+.font-main,
+.font-size-p {
+  font-family: $font-main;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 200;
+
+  +p {
+    margin-bottom: 15px;
+  }
+}
+
+h1,
+.font-size-1 {
+  font-size: calc(4vw + 18px);
+  line-height: 1.1;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 7rem;
+  }
+}
+
+h2,
+.font-size-2 {
+  font-size: calc(2.5vw + 15px);
+  margin-bottom: 12px;
+}
+
+h3,
+.font-size-3 {
+  font-size: calc(1.4vw + 15px);
+  font-weight: 400;
+}
+
+time {
+  font-size: 14px;
+}
+
+.ingress {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+  font-weight: 100;
+
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-center {
+  text-align: center;
+}
