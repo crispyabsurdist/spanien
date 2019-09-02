@@ -9,4 +9,47 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // background: -webkit-linear-gradient(to top right, $yellow-light, $pink-light);
+    // background: linear-gradient(to top right, $yellow-light, $pink-light);
+    background-color: $yellow;
+    opacity: .8;
+  }
 }
+
+.fullpage-text {
+
+  &-wrapper {
+    height: 100vh;
+    min-height: 100%;
+  }
+
+  &-content {
+    width: 100%;
+
+    >h1 {
+      display: block;
+      margin-bottom: 30px;
+      color: $white;
+
+      span {
+        //display: block;
+      }
+    }
+
+    p {
+      max-width: 80%;
+      color: $white;
+    }
+  }
+}
+
+
+// BLOG PAGE

@@ -1,8 +1,10 @@
 <header class="header-menu-desktop">
 
   <div class="header-logo-desktop">
-    <a href="<?php echo home_url('/'); ?>" class="font-head main-logo"><span class="font-weight-400">Lost in</span>
-      <span class="font-weight-700">Cuveta Fuma</span></a>
+    <a href="<?php echo home_url('/'); ?>" class="font-head main-logo">
+      <span class="font-bold">Cuveta Fumà</span>
+      <span class="source">a new chapter</span>
+    </a>
   </div>
 
   <div class="container h-100">
@@ -48,8 +50,10 @@
 <header class="header-menu-mobile">
 
   <div class="header-logo-mobile">
-    <a href="<?php echo home_url('/'); ?>" class="font-head main-logo"><span class="font-weight-400">Lost in</span>
-      <span class="font-weight-700">Cuveta Fuma</span></a>
+    <a href="<?php echo home_url('/'); ?>" class="font-head main-logo">
+      <span class="font-normal">Cuveta Fumà</span>
+      <span class="source">a new chapter</span>
+    </a>
   </div>
 
   <div class="ziploc">
