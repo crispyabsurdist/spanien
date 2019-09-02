@@ -15,11 +15,11 @@ $cover = get_field('cover-img');
           <?php $title_one = get_field('fp-title-one'); ?>
           <?php $title_two = get_field('fp-title-two'); ?>
 
-          <div class="fullpage-text-content">
+          <div class="fullpage-text-content" data-aos="fade-up">
             <h1>
               <?php echo $title_one; ?>
             </h1>
-            <p class="ingress"><?php the_field('fp-ingress'); ?></p>
+            <p class="ingress aos-init aos-animate" data-aos="fade-up"><?php the_field('fp-ingress'); ?></p>
           </div>
         </div>
       </div>

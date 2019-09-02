@@ -51,7 +51,6 @@ function assets()
 
   /**JAVASCRIPT**/
   wp_enqueue_script('slick', get_template_directory_uri() . '/assets/scripts/slick.min.js', ['jquery'], null, true);
-  wp_enqueue_script('slick', get_template_directory_uri() . '/assets/scripts/lazyload.min.js', ['jquery'], null, true);
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], '1.0', true);
 
   /**AJAX**/
