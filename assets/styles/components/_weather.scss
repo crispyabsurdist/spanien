@@ -1,0 +1,86 @@
+.current-weather {
+  position: relative;
+  float: right;
+  border-radius: 3px;
+  padding: 30px;
+
+  @include BoxShadow(24);
+  border-radius: 3px;
+  background-color: $yellow;
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    @include BoxShadow(12);
+  }
+
+  @include media-breakpoint-down(md) {
+    float: none;
+  }
+
+  >img {
+    position: relative;
+    margin-right: 30px;
+  }
+
+  &-data {
+    color: $white;
+
+    @include media-breakpoint-down(md) {
+      text-align: right;
+    }
+
+    li {
+      font-family: $font-main;
+      line-height: 1.2;
+      margin-bottom: 2px;
+
+      span {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      &.weather-desc {
+        margin-top: 7px;
+        margin-bottom: 5px;
+
+        span {
+          letter-spacing: 1.2px;
+          font-size: 1.8rem;
+        }
+      }
+
+      &.minmax {
+        display: inline-block;
+        margin-bottom: 5px;
+
+        span.text {
+          font-size: 1.2rem;
+        }
+      }
+
+      &.wind {
+        margin-bottom: 5px;
+
+        span.text {
+          font-size: 1.2rem;
+        }
+
+        img.icon-wind {
+          display: inline-block;
+          width: 20px;
+          height: auto;
+        }
+      }
+
+    }
+  }
+
+  >span.label {
+    position: absolute;
+    top: 100%;
+    right: 7px;
+    font-size: 11px;
+    color: $white;
+    opacity: .7;
+  }
+}

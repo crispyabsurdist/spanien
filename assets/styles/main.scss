@@ -4,12 +4,14 @@
 
 @import "common/global";
 @import "common/typography";
+@import "common/mixins";
 
 @import "components/buttons";
 @import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
 @import "components/form-reset";
+@import "components/weather";
 
 @import "layouts/header";
 @import "layouts/footer";
