@@ -150,3 +150,40 @@ function apply_custom_excerpt( $content, $link = false, $target = false ){
   $excerpt_link_target = $target;
   return apply_filters( 'get_the_excerpt', $content ); 
 }
+
+
+
+function wpb_remove_version()
+{
+    return '';
+}
+add_filter('the_generator', 'wpb_remove_version');
+
+
+// function wpb_custom_logo()
+// {
+//     echo '
+// <style type="text/css">
+// #wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+// background-image: url(' . get_bloginfo('stylesheet_directory') . '/images/custom-logo.png) !important;
+// background-position: 0 0;
+// color:rgba(0, 0, 0, 0);
+// }
+// #wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {
+// background-position: 0 0;
+// }
+// </style>
+// ';
+// }
+// //hook into the administrative header output
+// add_action('wp_before_admin_bar_render', 'wpb_custom_logo');
+
+
+function remove_footer_admin()
+{
+
+    echo 'Hedenborn rules!';
+
+}
+
+add_filter('admin_footer_text', 'remove_footer_admin');

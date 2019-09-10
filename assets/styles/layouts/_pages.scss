@@ -20,7 +20,7 @@
     // background: -webkit-linear-gradient(to top right, $yellow-light, $pink-light);
     // background: linear-gradient(to top right, $yellow-light, $pink-light);
     background-color: $yellow;
-    opacity: .8;
+    opacity: .9;
   }
 
   @include media-breakpoint-down(md) {
@@ -51,6 +51,15 @@
     p {
       max-width: 80%;
       color: $white;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 45px;
+      height: 6px;
+      width: 250px;
+      background-color: $white;
     }
   }
 }

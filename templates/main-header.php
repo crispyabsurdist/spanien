@@ -1,8 +1,16 @@
+<?php 
+
+if(is_home() && is_front_page()) :
+
+endif;
+
+?>
+
 <header class="header-menu-desktop">
 
   <div class="header-logo-desktop">
     <a href="<?php echo home_url('/'); ?>" class="font-head main-logo">
-      <span class="font-bold">Cuveta Fumà</span>
+      <span class="font-bold">Coveta Fumá</span>
       <span class="source">a new chapter</span>
     </a>
   </div>
@@ -51,7 +59,7 @@
 
   <div class="header-logo-mobile">
     <a href="<?php echo home_url('/'); ?>" class="font-head main-logo">
-      <span class="font-normal">Cuveta Fumà</span>
+      <span class="font-normal">Coveta Fumá</span>
       <span class="source">a new chapter</span>
     </a>
   </div>

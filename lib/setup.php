@@ -146,25 +146,51 @@ remove_role( 'author' );
 //  * Register News posts
 //  */
 
-// $labels = array(
-//   'name'                => 'Nyheter', 
-//   'menu_name'           => 'Nyheter',
-//   'singular_name'       => 'Nyhet',
-//   'all_items'           => 'Alla Nyheter',
-//   'edit_item'           => 'Ändra Nyheter',
-//   'update_item'         => 'Uppdatera Nyhet',
-//   'add_new_item'        => 'Skapa ny Nyhet',
-//   'new_item'            => 'Skapa ny Nyhet',
-//   'view_item'           => 'Se Nyhet',
-// );
+$labels = array(
+  'name'                => 'Story post', 
+  'menu_name'           => 'Story post',
+  'singular_name'       => 'Post',
+  'all_items'           => 'All story posts',
+  'edit_item'           => 'Change Story post',
+  'update_item'         => 'Update Story post',
+  'add_new_item'        => 'Add new Story post',
+  'new_item'            => 'Add new Story post',
+  'view_item'           => 'Show story',
+);
 
-// $args = array(
-//   'labels'              => $labels,
-//   'public'              => true,
-//   'show_in_nav_menus'   => true,
-//   'rewrite'             => array( 'slug' => 'news', 'with_front' => true ),
-//   'menu_icon'           => 'dashicons-carrot',
-//   'has_archive'         => false,
-//   'supports'            => array('title','page-attributes')
-//   );
-// register_post_type( 'news', $args );
+$args = array(
+  'labels'              => $labels,
+  'public'              => true,
+  'show_in_nav_menus'   => true,
+  'rewrite'             => array( 'slug' => 'stories', 'with_front' => true ),
+  'menu_icon'           => 'dashicons-carrot',
+  'has_archive'         => false,
+  'supports'            => array('title','page-attributes')
+  );
+register_post_type( 'stories', $args );
+
+$labels = array(
+  'name'                => 'Story type',
+  'menu_name'           => 'Story type',
+  'singular_name'       => 'Story type',
+  'search_items'        => 'Sök story type',
+  'all_items'           => 'Alla story typeer',
+  'edit_item'           => 'Ändra story type',
+  'update_item'         => 'Uppdatera story type',
+  'add_new_item'        => 'Skapa ny story type',
+  'new_item'            => 'Skapa ny story type',
+  'view_item'           => 'Visa story type',
+);
+$args = array(
+  'public'              => true,
+  'publicly_queryable'  => true,
+  'show_ui'             => true,
+  'show_in_menu'        => true,
+  'show_in_nav_menus'   => true,
+  'show_admin_column'   => true,
+  'hierarchical'        => true,
+  'query_var'           => true,
+  'labels'              => $labels,
+  'rewrite'             => array( 'slug' => 'story-type' ),
+);
+register_taxonomy( 'story-type', array( 'stories' ), $args );
