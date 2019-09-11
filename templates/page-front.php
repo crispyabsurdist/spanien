@@ -43,7 +43,7 @@ $cover = get_field('cover-img');
                 <li class="wind"><span>wind</span><span class="font-head"><?php echo $wind; ?> m/s</span><img class="icon-wind" src="<?php echo get_template_directory_uri() ?>/assets/images/wind-white.svg" alt="wind icon"></li>
               </ul>
             </div>
-            <span class="label">Real-time data - Coveta Fumá</span>
+            <span class="label">Vädret just nu.</span>
           </div>
         </div>
       </div>
