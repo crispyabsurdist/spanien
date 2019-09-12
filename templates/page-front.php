@@ -32,7 +32,8 @@ $cover = get_field('cover-img');
             <p class="ingress" data-aos="fade-up"><?php the_field('fp-ingress'); ?></p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-5">
+
+        <div class="col-md-6 col-lg-5 drunk-hello">
           <div class="media current-weather aos-animate aos-animate-custom " data-aos="fade-left" data-aos-delay="200">
             <img class="align-self-center" src="http://openweathermap.org/img/wn/<?php echo $icon; ?>@2x.png">
             <div class="media-body">
@@ -43,9 +44,11 @@ $cover = get_field('cover-img');
                 <li class="wind"><span>vind</span><span class="font-head"><?php echo $wind; ?> m/s</span><img class="icon-wind" src="<?php echo get_template_directory_uri() ?>/assets/images/wind-white.svg" alt="wind icon"></li>
               </ul>
             </div>
-            <span class="label">Vädret i Coveta Fumá just nu</span>
+            <span class="label">Vädret i Coveta Fumá</span>
           </div>
+          <img class="drunk-friend" src="<?php echo get_template_directory_uri() ?>/assets/images/drunk.png" alt="well helloo">
         </div>
+
       </div>
     </div>
   </div>

@@ -3,18 +3,8 @@
   float: right;
   border-radius: 3px;
   padding: 30px;
-  opacity: .8;
-
-  &::before {
-    content: '';
-    margin: -35px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-  }
+  opacity: 1;
+  z-index: 199;
 
   @include BoxShadow(24);
   border-radius: 3px;
@@ -108,14 +98,69 @@
 
 
 [data-aos^="fade"][data-aos^="fade"].aos-animate.aos-animate-custom {
-  opacity: .95 !important;
+  opacity: 1 !important;
   transition: all .25s ease-in-out;
-
-  &:hover {
-    opacity: .90;
-  }
 }
 
 
 // EXPERIMENTAL
 
+.drunk-hello {
+  position: relative;
+
+  img.drunk-friend {
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+  }
+
+  @-moz-keyframes moveLeftToRight {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -70px;
+    }
+  }
+
+  @-ms-keyframes moveLeftToRight {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -70px;
+    }
+  }
+
+  @keyframes moveLeftToRight {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -70px;
+    }
+  }
+
+  @-webkit-keyframes moveLeftToRight {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -70px;
+    }
+  }
+
+  >div.current-weather:hover+img.drunk-friend {
+    animation:  moveLeftToRight 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+}
