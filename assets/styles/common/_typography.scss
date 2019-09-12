@@ -28,11 +28,11 @@
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?Source+Sans+Pro:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,700&display=swap');
 
 $font-main: 'sweden_sansregular', serif;
 $font-head: 'sweden_sansbold', sans-serif;
-$source: 'Source Sans Pro', sans-serif;
+$source: 'Cormorant Garamond', serif;
 
 // Source Sans Pro - 300, 400, 700 
 
@@ -73,24 +73,12 @@ p,
 .font-main,
 .font-size-p {
   font-family: $font-main;
-  font-size: 1.4rem;
-  line-height: 1;
-  font-weight: 200;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-weight: 400;
 
   +p {
     margin-bottom: 15px;
-  }
-
-  &.ingress {
-    font-size: 1.7rem;
-    line-height: 1.7;
-
-    @include media-breakpoint-down(md) {
-      font-size: 1.3rem;
-      font-family: $font-main;
-      line-height: 1.6;
-      letter-spacing: .5px;
-    }
   }
 }
 
