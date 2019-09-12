@@ -7,7 +7,8 @@ use Roots\Sage\Assets;
 /**
  * Theme setup
  */
-function setup() {
+function setup()
+{
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/
   add_theme_support('soil-clean-up');
@@ -80,9 +81,9 @@ add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
   # Remove user roles
 ==============================================================================*/
 
-remove_role( 'subscriber' );
-remove_role( 'editor' );
-remove_role( 'author' );
+remove_role('subscriber');
+remove_role('editor');
+remove_role('author');
 
 
 /*==============================================================================
@@ -144,11 +145,9 @@ remove_role( 'author' );
 
 // /**
 //  * Register News posts
-//  */
-
 $labels = array(
-  'name'                => 'Story post', 
-  'menu_name'           => 'Story post',
+  'name'                => 'Blogg-post',
+  'menu_name'           => 'Blogg-post',
   'singular_name'       => 'Post',
   'all_items'           => 'All story posts',
   'edit_item'           => 'Change Story post',
@@ -161,26 +160,31 @@ $labels = array(
 $args = array(
   'labels'              => $labels,
   'public'              => true,
+  'publicly_queryable'  => true,
+  'query_var'           => true,
   'show_in_nav_menus'   => true,
-  'rewrite'             => array( 'slug' => 'stories', 'with_front' => true ),
-  'menu_icon'           => 'dashicons-carrot',
+  'rewrite'             => array('slug' => 'stories', 'with_front' => true),
+  'menu_icon'           => 'dashicons-book',
   'has_archive'         => false,
-  'supports'            => array('title','page-attributes')
-  );
-register_post_type( 'stories', $args );
+  'supports'            => array('title', 'author', 'thumbnail', 'excerpt', 'comments'),
+);
+register_post_type('stories', $args);
+
 
 $labels = array(
-  'name'                => 'Story type',
-  'menu_name'           => 'Story type',
-  'singular_name'       => 'Story type',
-  'search_items'        => 'Sök story type',
-  'all_items'           => 'Alla story typeer',
-  'edit_item'           => 'Ändra story type',
-  'update_item'         => 'Uppdatera story type',
-  'add_new_item'        => 'Skapa ny story type',
-  'new_item'            => 'Skapa ny story type',
-  'view_item'           => 'Visa story type',
+  'name' => _x('Poster', 'plural'),
+  'singular_name' => _x('Post', 'singular'),
+  'menu_name' => _x('Kategorier', 'admin menu'),
+  'name_admin_bar' => _x('Kategorier', 'admin bar'),
+  'add_new' => _x('Lägg till', 'add new'),
+  'add_new_item' => __('Lägg till nytt'),
+  'new_item' => __('Nytt'),
+  'edit_item' => __('Editera'),
+  'view_item' => __('Visa'),
+  'all_items' => __('Visa alla poster'),
+  'not_found' => __('No news found.'),
 );
+
 $args = array(
   'public'              => true,
   'publicly_queryable'  => true,
@@ -188,9 +192,9 @@ $args = array(
   'show_in_menu'        => true,
   'show_in_nav_menus'   => true,
   'show_admin_column'   => true,
-  'hierarchical'        => true,
+  'hierarchical'        => false,
   'query_var'           => true,
   'labels'              => $labels,
-  'rewrite'             => array( 'slug' => 'story-type' ),
+  'rewrite'             => array('slug' => 'story'),
 );
-register_taxonomy( 'story-type', array( 'stories' ), $args );
+register_taxonomy('story', array('stories'), $args);

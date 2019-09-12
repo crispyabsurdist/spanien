@@ -20,7 +20,7 @@ $cover = get_field('cover-img');
   <div class="fullpage-text-wrapper">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
-        <div class="col-md-6 col-lg-7">
+        <div class="col-md-10 col-lg-10">
 
           <?php $title_one = get_field('fp-title-one'); ?>
           <?php $title_two = get_field('fp-title-two'); ?>
@@ -41,14 +41,12 @@ $cover = get_field('cover-img');
                 <li class="weather-desc"><span class="font-main"><?php echo $maind; ?></span><span class="font-head last"><?php echo number_format($temp, 1); ?>&deg;</span></li>
                 <li class="minmax"><span>min</span><span class="font-head last"><?php echo number_format($mintemp, 1); ?>&deg;</span></li>
                 <li class="minmax"><span>max</span><span class="font-head last"><?php echo number_format($maxtemp, 1); ?>&deg;</span></li>
-                <li class="wind"><span>vind</span><span class="font-head"><?php echo $wind; ?> m/s</span><img class="icon-wind" src="<?php echo get_template_directory_uri() ?>/assets/images/wind-white.svg" alt="wind icon"></li>
+                <li class="wind"><span>wind</span><span class="font-head"><?php echo $wind; ?> m/s</span><img class="icon-wind" src="<?php echo get_template_directory_uri() ?>/assets/images/wind-white.svg" alt="wind icon"></li>
               </ul>
             </div>
-            <span class="label">Vädret i Coveta Fumá</span>
           </div>
-          <img class="drunk-friend" src="<?php echo get_template_directory_uri() ?>/assets/images/drunk.png" alt="well helloo">
+          <!-- <img class="drunk-friend" src="<?php echo get_template_directory_uri() ?>/assets/images/drunk.png" alt="well helloo"> -->
         </div>
-
       </div>
     </div>
   </div>
