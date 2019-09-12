@@ -3,6 +3,18 @@
   float: right;
   border-radius: 3px;
   padding: 30px;
+  opacity: .8;
+
+  &::before {
+    content: '';
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   @include BoxShadow(24);
   border-radius: 3px;
@@ -23,6 +35,7 @@
   }
 
   &-data {
+    display: block;
     color: $white;
 
     @include media-breakpoint-down(md) {
@@ -53,15 +66,19 @@
         display: inline-block;
         margin-bottom: 5px;
 
-        span.text {
+        span {
           font-size: 1.2rem;
+        }
+
+        span.last {
+          margin-right: 0;
         }
       }
 
       &.wind {
         margin-bottom: 5px;
 
-        span.text {
+        span {
           font-size: 1.2rem;
         }
 
@@ -79,10 +96,26 @@
     position: absolute;
     bottom: 100%;
     right: 7px;
-    //transform: translateX(-50%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $white;
-    opacity: .7;
-    font-family: $font-head;
+    font-family: $font-main;
   }
 }
+
+.current-weather-data li.weather-desc span.last {
+  margin-right: 0;
+}
+
+
+[data-aos^="fade"][data-aos^="fade"].aos-animate.aos-animate-custom {
+  opacity: .95 !important;
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    opacity: .90;
+  }
+}
+
+
+// EXPERIMENTAL
+
