@@ -104,3 +104,22 @@
     margin-bottom: 30px;
   }
 }
+
+
+div.author {
+
+  span.pre {
+    display: inline;
+    margin-right: 7px;
+    font-family: $font-main;
+    font-size: 11px;
+  }
+
+  span.name {
+    font-family: $font-head;
+    
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

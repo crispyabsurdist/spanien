@@ -2,7 +2,7 @@
 /*
  * 
  * Template Name: Stories Single
- * Template Post Type: Stories
+ * Template Post Type: historier
  */
 ?>
 
@@ -31,7 +31,7 @@
             <time datetime="<?php echo get_the_date(); ?>">
               <?php echo get_the_date(); ?>
             </time>
-            <h1 class="post-singel-title"><?php the_title(); ?></h1>
+            <h1 class="post-singel-title reveal-text"><?php the_title(); ?></h1>
             <?php if ($post_ingress) : ?>
               <div class="post-singel-ingress">
                 <p class="">
@@ -44,6 +44,10 @@
           <div class="col-md-8 justify-content-center">
             <div class="post-singel-content">
               <?php echo $post_content; ?>
+              <div class="author">
+                <span class="pre">Skrivet av</span>
+                <span class="name"><?php echo get_author_name(); ?></span>
+              </div>
             </div>
           </div>
         </div>

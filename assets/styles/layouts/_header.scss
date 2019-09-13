@@ -148,7 +148,7 @@
 // MOBILE NAV
 
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
-$menuItems: 4;
+$menuItems: 8;
 
 .header-menu-mobile {
 
@@ -160,9 +160,9 @@ $menuItems: 4;
   display: block;
   top: 0;
   left: 0;
-  height: 50px;
+  height: 65px;
   width: 100%;
-  background: $red;
+  background: $red-neon-dark;
   overflow: hidden;
   transition: all .3s ease-in-out;
   transition-delay: .2s;
@@ -171,13 +171,12 @@ $menuItems: 4;
   .ziploc {
     float: right;
     position: relative;
-    height: 50px;
+    height: 65px;
     width: 50px;
     z-index: 100;
 
     #sandwich {
-      width: 18px;
-      height: 100%;
+      width: 25px;
       position: relative;
       display: block;
       margin: -5px auto 0;
@@ -198,7 +197,7 @@ $menuItems: 4;
 
         &.bottom {
           transform: translateY(6px) rotate(0deg);
-          width: 80%;
+          width: 75%;
           float: right;
         }
       }

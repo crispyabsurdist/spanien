@@ -9,26 +9,9 @@ use Roots\Sage\Assets;
  */
 function setup()
 {
-  // Enable features from Soil when plugin is activated
-  // https://roots.io/plugins/soil/
-  add_theme_support('soil-clean-up');
-  add_theme_support('soil-nav-walker');
-  add_theme_support('soil-nice-search');
-  add_theme_support('soil-jquery-cdn');
-  add_theme_support('soil-relative-urls');
 
-  // Make theme available for translation
-  // Community translations can be found at https://github.com/roots/sage-translations
   load_theme_textdomain('sage', get_template_directory() . '/lang');
-
-  // Enable plugins to manage the document title
-  // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
-
-  // Enable post thumbnails
-  // http://codex.wordpress.org/Post_Thumbnails
-  // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
-  // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
   // Enable post formats
@@ -146,15 +129,15 @@ remove_role('author');
 // /**
 //  * Register News posts
 $labels = array(
-  'name'                => 'Blogg-post',
-  'menu_name'           => 'Blogg-post',
-  'singular_name'       => 'Post',
-  'all_items'           => 'All story posts',
-  'edit_item'           => 'Change Story post',
-  'update_item'         => 'Update Story post',
-  'add_new_item'        => 'Add new Story post',
-  'new_item'            => 'Add new Story post',
-  'view_item'           => 'Show story',
+  'name'                => 'Blogg',
+  'menu_name'           => 'Blogg',
+  'singular_name'       => 'Inlägg',
+  'all_items'           => 'Visa alla inlägg',
+  'edit_item'           => 'Ändra post',
+  'update_item'         => 'Uppdatera',
+  'add_new_item'        => 'Lägg till nytt',
+  'new_item'            => 'Lägg till nytt',
+  'view_item'           => 'Visa',
 );
 
 $args = array(
@@ -163,38 +146,38 @@ $args = array(
   'publicly_queryable'  => true,
   'query_var'           => true,
   'show_in_nav_menus'   => true,
-  'rewrite'             => array('slug' => 'stories', 'with_front' => true),
+  'rewrite'             => array('slug' => 'bloggen', 'with_front' => true),
   'menu_icon'           => 'dashicons-book',
   'has_archive'         => false,
-  'supports'            => array('title', 'author', 'thumbnail', 'excerpt', 'comments'),
+  'supports'            => array('title', 'author', 'thumbnail', 'excerpt'),
 );
 register_post_type('stories', $args);
 
 
-$labels = array(
-  'name' => _x('Poster', 'plural'),
-  'singular_name' => _x('Post', 'singular'),
-  'menu_name' => _x('Kategorier', 'admin menu'),
-  'name_admin_bar' => _x('Kategorier', 'admin bar'),
-  'add_new' => _x('Lägg till', 'add new'),
-  'add_new_item' => __('Lägg till nytt'),
-  'new_item' => __('Nytt'),
-  'edit_item' => __('Editera'),
-  'view_item' => __('Visa'),
-  'all_items' => __('Visa alla poster'),
-  'not_found' => __('No news found.'),
-);
+// $labels = array(
+//   'name' => _x('Kategorier', 'plural'),
+//   'singular_name' => _x('Kategori', 'singular'),
+//   'menu_name' => _x('Kategorier', 'admin menu'),
+//   'name_admin_bar' => _x('Kategorier', 'admin bar'),
+//   'add_new' => _x('Lägg till', 'add new'),
+//   'add_new_item' => __('Lägg till nytt'),
+//   'new_item' => __('Nytt'),
+//   'edit_item' => __('Editera'),
+//   'view_item' => __('Visa'),
+//   'all_items' => __('Visa alla poster'),
+//   'not_found' => __('No news found.'),
+// );
 
-$args = array(
-  'public'              => true,
-  'publicly_queryable'  => true,
-  'show_ui'             => true,
-  'show_in_menu'        => true,
-  'show_in_nav_menus'   => true,
-  'show_admin_column'   => true,
-  'hierarchical'        => false,
-  'query_var'           => true,
-  'labels'              => $labels,
-  'rewrite'             => array('slug' => 'story'),
-);
-register_taxonomy('story', array('stories'), $args);
+// $args = array(
+//   'public'              => true,
+//   'publicly_queryable'  => true,
+//   'show_ui'             => true,
+//   'show_in_menu'        => true,
+//   'show_in_nav_menus'   => true,
+//   'show_admin_column'   => true,
+//   'hierarchical'        => false,
+//   'query_var'           => true,
+//   'labels'              => $labels,
+//   'rewrite'             => array('slug' => 'inlagg'),
+// );
+// register_taxonomy('blogpost', array('stories'), $args);

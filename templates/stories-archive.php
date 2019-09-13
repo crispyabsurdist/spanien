@@ -1,8 +1,8 @@
 <?php
 /*
  * 
- * Template Name: Stories Archive
- * Template Post Type: Stories
+ *  Stories Archive
+ * 
  */
 ?>
 
@@ -38,6 +38,7 @@
           $thumb = ($special_thumb) ? $special_thumb : $main_thumb;
 
           ?>
+
 
           <div class="col-6 col-sm-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card-obj">

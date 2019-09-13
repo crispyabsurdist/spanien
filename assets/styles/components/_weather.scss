@@ -1,14 +1,27 @@
+.drunk-hello {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding-right: 0;
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    padding-right: 15px;
+  }
+}
+
 .current-weather {
+
+  @include BoxShadow(24);
+
   position: relative;
   float: right;
   border-top-left-radius: 3px;
-  padding: 15px 45px 15px 15px;
-  opacity: 1;
-  z-index: 199;
-
-  @include BoxShadow(24);
-  background-color: $yellow;
+  padding: 15px 45px 15px 30px;
+  height: auto;
   transition: all .25s ease-in-out;
+  background-color: $red-neon;
+  z-index: 199;
 
   &:hover {
     @include BoxShadow(12);
@@ -16,19 +29,29 @@
 
   @include media-breakpoint-down(md) {
     float: none;
+    padding: 15px;
   }
 
   >img {
     position: relative;
     margin-right: 5px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  div.media-body {
+    margin-left: 15px;
   }
 
   &-data {
     display: block;
     color: $white;
+    text-align: right;
 
-    @include media-breakpoint-down(md) {
-      text-align: right;
+    @include media-breakpoint-down(sm) {
+      text-align: left;
     }
 
     li {
@@ -38,7 +61,6 @@
 
       span {
         display: inline-block;
-        margin-right: 10px;
       }
 
       &.weather-desc {
@@ -46,6 +68,7 @@
         margin-bottom: 5px;
 
         span {
+          display: block;
           letter-spacing: 1.2px;
           font-size: 1.8rem;
         }
@@ -57,10 +80,10 @@
 
         span {
           font-size: 1.2rem;
-        }
 
-        span.last {
-          margin-right: 0;
+          &.unit {
+            margin-right: 7px;
+          }
         }
       }
 
@@ -69,26 +92,35 @@
 
         span {
           font-size: 1.2rem;
+
+          &.unit {
+            margin-right: 7px;
+          }
         }
 
         img.icon-wind {
           display: inline-block;
           width: 20px;
           height: auto;
+          margin-left: 7px;
         }
       }
 
     }
   }
 
-  >span.label {
-    position: absolute;
-    bottom: 100%;
-    right: 7px;
-    font-size: 1rem;
-    color: $white;
-    font-family: $font-main;
-  }
+  // >span.label {
+  //   position: absolute;
+  //   left: -70px;
+  //   top: 64px;
+  //   transform-origin: bottom;
+  //   transform: rotate(-90deg);
+  //   white-space: nowrap;
+  //   font-size: 1rem;
+  //   color: $white;
+  //   font-family: $font-main;
+  //   text-align: left;
+  // }
 }
 
 .current-weather-data li.weather-desc span.last {
@@ -97,77 +129,5 @@
 
 
 [data-aos^="fade"][data-aos^="fade"].aos-animate.aos-animate-custom {
-  opacity: 1 !important;
   transition: all .25s ease-in-out;
-}
-
-
-// EXPERIMENTAL
-
-.drunk-hello {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding-right: 0;
-
-  @include media-breakpoint-down(md) {
-    position: relative;
-    padding-right: 15px;
-  }
-
-  img.drunk-friend {
-    display: block;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    z-index: 1;
-    left: 20px;
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-  }
-
-  @-moz-keyframes moveLeftToRight {
-    0% {
-      left: 0;
-    }
-
-    100% {
-      left: -70px;
-    }
-  }
-
-  @-ms-keyframes moveLeftToRight {
-    0% {
-      left: 0;
-    }
-
-    100% {
-      left: -70px;
-    }
-  }
-
-  @keyframes moveLeftToRight {
-    0% {
-      left: 0;
-    }
-
-    100% {
-      left: -70px;
-    }
-  }
-
-  @-webkit-keyframes moveLeftToRight {
-    0% {
-      left: 0;
-    }
-
-    100% {
-      left: -70px;
-    }
-  }
-
-  >div.current-weather:hover+img.drunk-friend {
-    animation:  moveLeftToRight 1s ease-out;
-    animation-fill-mode: forwards;
-  }
 }

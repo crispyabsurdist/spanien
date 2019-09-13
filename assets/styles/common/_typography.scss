@@ -84,7 +84,7 @@ p,
 
 h1,
 .font-size-1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
 
   @include media-breakpoint-down(lg) {
     font-size: calc(3vw + 18px);
@@ -123,4 +123,14 @@ time {
 
 .text-underline {
   text-decoration: underline;
+}
+
+
+.ingress-standalone {
+  font-size: 2rem;
+  line-height: 1.6;
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.5rem;
+  }
 }

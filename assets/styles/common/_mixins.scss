@@ -1,3 +1,5 @@
+// BOXSHADOW FUNCTION
+
 @mixin BoxShadow ($dp) {
   @if $dp==0 {
     box-shadow: none
@@ -42,4 +44,14 @@
   @else if $dp==24 {
     box-shadow: 0 24px 38px 3px rgba(0, 0, 0, .05), 0 9px 46px 8px rgba(0, 0, 0, .12), 0 11px 15px -7px rgba(0, 0, 0, .20)
   }
+}
+
+// BOXSHADOW END
+
+
+
+@mixin linear-gradient($direction, $color-stops) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
 }
