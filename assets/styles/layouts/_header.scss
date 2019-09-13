@@ -85,8 +85,8 @@
 
         &:hover::before,
         &:focus::before {
-          color: $yellow-light;
-          text-shadow: 10px 0 $yellow-light, -10px 0 $yellow-light;
+          color: $silver;
+          text-shadow: 10px 0 $silver, -10px 0 $silver;
         }
       }
     }

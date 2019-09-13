@@ -1,7 +1,7 @@
 <?php
 /*
  * 
- *  Stories Archive
+ * Template name: Stories Archive
  * 
  */
 ?>
@@ -40,22 +40,29 @@
           ?>
 
 
-          <div class="col-6 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-12 col-sm-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card-obj">
               <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                 <div class="card-thumb" style="background-image:url(<?php echo $thumb['url']; ?>)"></div>
               </a>
 
               <div class="card-text">
+
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                   <h2 class="font-size-3"><?php the_title(); ?></h2>
                 </a>
+
                 <span class="card-posted">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/calendar.svg" alt="calendar">
                   <time datetime="<?php echo get_the_date(); ?>">
                     <?php echo get_the_date(); ?>
                   </time>
                 </span>
+
+                <a class="read-icon-link" href="<?php the_permalink(); ?>" title="Read">
+                 <img class="read-icon" src="<?php echo get_template_directory_uri() ?>/assets/images/read.png" alt="Read the blog post">
+                </a>
+
               </div>
 
             </div>

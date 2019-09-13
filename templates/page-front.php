@@ -33,7 +33,7 @@ $cover = get_field('cover-img');
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-5 drunk-hello">
+      <div class="col-md-12 col-lg-5 drunk-weather">
         <div class="media current-weather aos-animate aos-animate-custom " data-aos="fade-left" data-aos-delay="200">
           <img class="align-self-center" src="http://openweathermap.org/img/wn/<?php echo $icon; ?>@2x.png">
           <div class="media-body">

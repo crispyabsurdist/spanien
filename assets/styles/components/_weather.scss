@@ -1,5 +1,5 @@
-.drunk-hello {
-  position: fixed;
+.drunk-weather {
+  position: absolute;
   bottom: 30px;
   right: 30px;
   padding-right: 0;
@@ -7,6 +7,8 @@
   @include media-breakpoint-down(md) {
     position: relative;
     padding-right: 15px;
+    bottom: auto;
+    right: auto;;
   }
 }
 
