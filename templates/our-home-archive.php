@@ -1,7 +1,7 @@
 <?php
 /*
  * 
- * Template name: Stories Archive
+ * Template name: Our home Archive
  * 
  */
 ?>
@@ -17,7 +17,7 @@
     <div class="row archive-row">
       <?php
       $args = array(
-        'post_type' => 'stories',
+        'post_type' => 'ourhome',
         'orderby' => 'date',
         'order' => 'DESC',
         'post_status' => 'publish',

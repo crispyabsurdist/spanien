@@ -129,8 +129,8 @@ remove_role('author');
 // /**
 //  * Register News posts
 $labels = array(
-  'name'                => 'Blogg',
-  'menu_name'           => 'Blogg',
+  'name'                => 'Sol & bad',
+  'menu_name'           => 'Sol & bad',
   'singular_name'       => 'Inlägg',
   'all_items'           => 'Visa alla inlägg',
   'edit_item'           => 'Ändra post',
@@ -152,6 +152,60 @@ $args = array(
   'supports'            => array('title', 'author', 'thumbnail', 'excerpt'),
 );
 register_post_type('stories', $args);
+
+// /**
+//  * Register Golf posts
+$labels = array(
+  'name'                => 'Golf',
+  'menu_name'           => 'Golf',
+  'singular_name'       => 'Inlägg',
+  'all_items'           => 'Visa alla inlägg',
+  'edit_item'           => 'Ändra post',
+  'update_item'         => 'Uppdatera',
+  'add_new_item'        => 'Lägg till nytt',
+  'new_item'            => 'Lägg till nytt',
+  'view_item'           => 'Visa',
+);
+
+$args = array(
+  'labels'              => $labels,
+  'public'              => true,
+  'publicly_queryable'  => true,
+  'query_var'           => true,
+  'show_in_nav_menus'   => true,
+  'rewrite'             => array('slug' => 'golf', 'with_front' => true),
+  'menu_icon'           => 'dashicons-book',
+  'has_archive'         => false,
+  'supports'            => array('title', 'author', 'thumbnail', 'excerpt'),
+);
+register_post_type('golf', $args);
+
+// /**
+//  * Register News posts
+$labels = array(
+  'name'                => 'Vårat hem',
+  'menu_name'           => 'Vårat hem',
+  'singular_name'       => 'Inlägg',
+  'all_items'           => 'Visa alla inlägg',
+  'edit_item'           => 'Ändra post',
+  'update_item'         => 'Uppdatera',
+  'add_new_item'        => 'Lägg till nytt',
+  'new_item'            => 'Lägg till nytt',
+  'view_item'           => 'Visa',
+);
+
+$args = array(
+  'labels'              => $labels,
+  'public'              => true,
+  'publicly_queryable'  => true,
+  'query_var'           => true,
+  'show_in_nav_menus'   => true,
+  'rewrite'             => array('slug' => 'ourhome', 'with_front' => true),
+  'menu_icon'           => 'dashicons-book',
+  'has_archive'         => false,
+  'supports'            => array('title', 'author', 'thumbnail', 'excerpt'),
+);
+register_post_type('ourhome', $args);
 
 
 // $labels = array(
