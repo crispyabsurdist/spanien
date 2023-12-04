@@ -1,5 +1,3 @@
-Tanka ner standardplugins via git@github.com:tross-sverige/standard-plugins.git
-
 Instruktioner:
 
 1. $ npm install
